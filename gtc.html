@@ -1,0 +1,38 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<br><button type="button" onclick="myFunction()">Convert Coordinates</button><br><br>
+<form> 
+<fieldset>
+<legend>coordinates conversation</legend>
+<table style="width:flex;">
+
+<tr> 
+   <td style="background-color: rgb(0, 0, 255); text-align: center; width:120px">Latitude</td>  
+    <td style="background-color: rgb(0, 0, 255); text-align: center; width: 120px">Longitude</td> <br>
+</tr>
+<tr>
+    <td style="background-color: rgb(230, 230, 230); text-align: center; width: 120px"><input type="number" id="lat"></td> 
+    <td style="background-color: rgb(230, 230, 130); text-align: center; width: 120px"><input type="number" id="lng" >
+</tr>
+</table>
+<br><div>
+<p id="ds"></p></div>
+<script>
+function myFunction() {
+var a = document.getElementById("lat").value;
+var b = document.getElementById("lng").value;
+var y = 6371000*Math.cos(a*Math.PI/180)*Math.sin(b*Math.PI/180);
+var x = 6371000*Math.cos(a*Math.PI/180)*Math.cos(b*Math.PI/180);
+
+if (a < 90 || a > -90 && b < 360 || b > 0) { 
+document.getElementById("ds").innerHTML = "x = " + " " + x + "<br>" + "<br>" + "y = " + " " + y;
+}else{
+document.getElementById("ds").innerHTML = "latitude or longitude is out of tolerance ";}
+}
+</script>
+</body>
+</html>
