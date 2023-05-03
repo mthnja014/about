@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Cartesian to Geographic</title>
+   <title></title>
 </head>
 <body>
 <br><button type="button" onclick="myFunction()">Convert Coordinates</button><br><br>
@@ -12,25 +12,28 @@
 
 <tr> 
    <td style="background-color: rgb(0, 0, 255); text-align: center; width:120px">Y</td>  
-    <td style="background-color: rgb(0, 0, 255); text-align: center; width: 120px">X</td> <br>
+   <td style="background-color: rgb(0, 0, 255); text-align: center; width: 120px">X</td> <br>
+   <td style="background-color: rgb(0, 0, 255); text-align: center; width: 120px">Z</td>
 </tr>
 <tr>
     <td style="background-color: rgb(230, 230, 130); text-align: center; width: 120px"><input type="number" id="y"></td> 
     <td style="background-color: rgb(230, 230, 230); text-align: center; width: 120px"><input type="number" id="x" ></td>
+    <td style="background-color: rgb(230, 230, 130); text-align: center; width: 120px"><input type="number" id="z" ></td>
 </tr>
 </table>
+</fieldset>
 <br><div>
 <p id="ds"></p></div>
-</fieldset>
 <script>
 function myFunction() {
 var c = document.getElementById("y").value;
 var d = document.getElementById("x").value;
-var lat = Math.acos(c/6371000)*(180/Math.PI);
-var p = 6371000*Math.cos(lat*Math.PI/180);
-var lng = Math.asin(d/p)*(180/Math.PI);
+var e = document.getElementById("z").value;
+var lat = Math.asin(e/(Math.abs(Math.pow(c, 2)) + Math.abs(Math.pow(d, 2)) + Math.abs(Math.pow(e, 2))))*180/Math.PI;
 
-if (d > -1000000000000000) {
+var lng = Math.atan(c/d)*180/Math.PI;
+
+if (d > -100000000000000) {
 document.getElementById("ds").innerHTML = "Latitude = " + " " + lat + "<br>" + "<br>" + "Longitude = " + " " + lng;}
 }
 </script>
