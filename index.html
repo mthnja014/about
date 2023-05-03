@@ -1,57 +1,45 @@
-<html><head>
-	<title>SDI_about</title>
-	<style type="text/css">
-	#banner {
-			font-family: Arial;
-			background-color: blue;
-			padding: 2px 2px 2px 8px;
-			}
-	#navigation {
-			padding: 10px;
-			border: 1px dotted;
-			font-family: Arial;
-			font-size: 100%;
-			background-color: none;
-			}
-	#content {
-			leftmargin: 0;
-			topmargin: 0;
-			marginwidth: 0;
-			marginheight: 0;
-			padding: 2px;
-			font-family: Arial;
-			background-image: url("R.jpg");
-			background-size: cover;
-			background-repeat: no-repeat;
-			text-align: centre
-
-	a: hover {
-			font-weight: bold;
-			}
-		a: link, a: visited {
-			text-decoration: none;
-			color: #550039;
-			}
-
-	</style>
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Coordinates Conversation</title>
+<style>
+#geog {
+text-align: "center";
+width: 100%;
+height: 80px;
+text-align: center;
+background-color: rgb(255, 255, 200);
+color: rgb(0,0,0);
+border-radius: 2%;
+}
+#cate {
+text-align: "center";
+width: 100%;
+height: 80px;
+text-align: center;
+background-color: rgb(100, 100, 220);
+color: rgb(0,0,0);
+border-radius: 2%;
+justify-content: "center";
+}
+</style>
 </head>
 <body>
-<div id="banner">
-	<h1>Western Cape SAPS SDI</h1>
-</div>
-<div id="navigation">
-	<a href="https://mthnja014.github.io/about/">about</a>
-</div>
+<h style="text-align:center; color:green"><b>Geographic and Cartesian Coordinates Conversation<b></h><br><br><br>
+<script>
+      function validateForm()     
+</script>  
+<fieldset>
+<form action="gtc.html" onsubmit="return validateForm()">
+<div class="home"><button id="geog"><b>Geographic to Cartesian</b></button></div><br><br>
+</form>
 
-<div id="content">
+<script>
+      function validateForm()     
+</script>  
 
-The Western Cape Policing Department is part of the South African Police Services. 
-We as the Western Cape Government promotes the sharing of data among our police stations.
-This is an important role to monitor crime in the city. 
-This monitoring of crime is expanding on the 2019-2024 Western Cape strategic plan for fighting crime in the province. 
-The crime statistical data shared is for all plolice stations within the province.
-
-</div>
-
+<form action="ctg.html" onsubmit="return validateForm()">
+<div class="home"><button id="cate"><b>Cartesian to Geographic</b></button></div>
+</form></fieldset>
 </body>
 </html>
