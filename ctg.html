@@ -30,10 +30,10 @@ var c = document.getElementById("y").value;
 var d = document.getElementById("x").value;
 var e = document.getElementById("z").value;
 var lat = Math.asin(e/(Math.abs(Math.pow(c, 2)) + Math.abs(Math.pow(d, 2)) + Math.abs(Math.pow(e, 2))))*180/Math.PI;
-var lat = lat.tiFixed(2);
+var lat = lat.tiFixed(5);
     
 var lng = Math.atan(c/d)*180/Math.PI;
-   var lng = lng.toFixed(2);
+   var lng = lng.toFixed(5);
 
 if (d > -100000000000000) {
 document.getElementById("ds").innerHTML = "Latitude = " + " " + lat + "<br>" + "<br>" + "Longitude = " + " " + lng;}
