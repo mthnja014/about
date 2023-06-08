@@ -34,7 +34,7 @@ var z = 6371000*Math.sin(a*Math.PI/180);
 
 
    
-if (a < 90 || a > -90 || b < 360 || b > 0) { 
+if (a < 90 || a == 90 || a > -90 || a == -90 || b < 360 || b == 360 || b > 0 || b == 0) { 
 document.getElementById("ds").innerHTML = "x = " + " " + x + "<br>" + "<br>" + "y = " + " " + y + "<br>" + "<br>" + "z =" + z;
 }else{
 document.getElementById("ds").innerHTML = "latitude or longitude is out of tolerance ";}
