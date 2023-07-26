@@ -34,7 +34,7 @@ var z = 6371000*Math.sin(a*Math.PI/180);
 
 
    
-if (a < 90) {
+if (a == "" || b == "") {
 } else if (a < 90 && b < 180) {
 document.getElementById("ds").innerHTML = "x = " + " " + x + "<br>" + "<br>" + "y = " + " " + y + "<br>" + "<br>" + "z =" + z;
 } else if (a < 90 && b > -180) {
