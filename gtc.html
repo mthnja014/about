@@ -36,20 +36,8 @@ var z = 6371000*Math.sin(a*Math.PI/180);
    
 if (a == "" || b == "") {
 document.getElementById("ds").innerHTML = "Please Insert Your Coordinates!";
-}else if (a < -90 || a > 90) {
-document.getElementById("ds").innerHTML = "latitude is out of tolerance";
-}else if (b < -180 || b > 180) {
-document.getElementById("ds").innerHTML = "longitude is out of tolerance";
-} else if (a < 90 && b < 180) {
+} else 
 document.getElementById("ds").innerHTML = "x = " + " " + x + "<br>" + "<br>" + "y = " + " " + y + "<br>" + "<br>" + "z =" + z;
-} else if (a < 90 && b > -180) {
-document.getElementById("ds").innerHTML = "x = " + " " + x + "<br>" + "<br>" + "y = " + " " + y + "<br>" + "<br>" + "z =" + z;
-} else if (a > -90 && b < 180) {
-document.getElementById("ds").innerHTML = "x = " + " " + x + "<br>" + "<br>" + "y = " + " " + y + "<br>" + "<br>" + "z =" + z;
-} else if (a > -90 && b > -180) {
-document.getElementById("ds").innerHTML = "x = " + " " + x + "<br>" + "<br>" + "y = " + " " + y + "<br>" + "<br>" + "z =" + z;
-} else
-document.getElementById("ds").innerHTML = "Synthax Error!";
 }
 </script>
 </body>
